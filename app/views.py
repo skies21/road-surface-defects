@@ -5,7 +5,7 @@ from tensorflow.keras.applications.resnet_v2 import preprocess_input
 from keras.models import Sequential, load_model
 import numpy as np
 
-from app.forms import ImageUploadForm
+from .forms import ImageUploadForm
 
 # Loading the model
 model = load_model("app/ResNet152V2.h5")
@@ -24,12 +24,12 @@ def index(request):
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
             img = form.cleaned_data['image']
-            img_path = default_storage.save('tmp/' + img.name, img)
+            img_path = default_storage.save('app/static/' + img.name, img)
             img_array = prepare_image(img_path)
             prediction = model.predict(img_array)
             result = prediction[0]
 
-            return render(request, 'result.html', {'result': result, 'img_path': img_path})
+            return render(request, 'result.html', {'result': result, 'img_path': img.name})
 
     else:
         form = ImageUploadForm()
