@@ -1,14 +1,43 @@
 <!-- templates/result.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        /* Дополнительные стили можно добавить сюда */
+        body {
+            padding: 20px;
+        }
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .image-container {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Prediction Result</h1>
-    <p>Prediction: {{ result }}</p>
-    <img src="{{ img_path }}" alt="Uploaded Image">
-    <br>
-    <a href="{% url 'index' %}">Upload another image</a>
+    <div class="result-container">
+        <h1 class="mt-4 mb-4">Prediction Result</h1>
+        <div class="card">
+            <div class="card-body">
+                <p class="lead">Prediction: {{ result }}</p>
+                <img src="{{ img_path }}" class="image-container img-fluid" alt="Uploaded Image">
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'index' %}" class="btn btn-primary">Upload another image</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение Bootstrap JS (необходимо для некоторых компонентов) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+D65GP1stvhk5ifBk0xaIS/ZyENyW3Q6jBb" crossorigin="anonymous"></script>
 </body>
 </html>
