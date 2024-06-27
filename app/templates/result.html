@@ -1,0 +1,14 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>Prediction: {{ result }}</p>
+    <img src="{{ img_path }}" alt="Uploaded Image">
+    <br>
+    <a href="{% url 'index' %}">Upload another image</a>
+</body>
+</html>
