@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        /* Дополнительные стили можно добавить сюда */
+        body {
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ref {
+            color: white;
+        }
+        .about {
+            padding: 20px;
+            font-size: 20px;
+        }
+        .devs {
+            display: flex;
+            justify-content: start;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .dev {
+            width: 250px;
+            height: 60px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            background-color: #343a40;
+            color: white;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        h2 {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'index' %}">Upload Image</a>
+    </nav>
+
+    <div class="about">
+        Была предложена и разработана система обнаружения
+дефектов дорог с использованием CNN и трансферного обучения. Цель
+исследования заключалась в создании модели машинного обучения, которая
+могла бы точно обнаруживать дорожные трещины и бороздки на
+изображениях, которые можно было бы использовать для поддержки усилий
+по содержанию дорог и обеспечению безопасности. Собранный набор
+данных изображений дорог содержал как дефекты дорог, так и другие
+нерелевантные особенности. Данные были предварительно обработаны,
+дубликаты и изображения низкого качества были удалены. Для обучения на
+наборе данных мы использовали трансферное обучение с несколькими
+популярными моделями CNN, включая ResNet152V2, Xception, InceptionV3,
+MobileNetV2 и InceptionResNetV2. Результаты экспериментов показали, что
+ResNet152V2 показал лучшие результаты среди протестированных моделей,
+вероятно, благодаря своей способности изучать обобщаемые функции из
+большого набора данных ImageNet и использованию остаточных связей для
+уменьшения проблемы исчезающего градиента. На тестовом наборе мы
+достигли высокой точности 95,37869%, что продемонстрировало
+эффективность нашего подхода. В дальнейшей работе могут быть изучены
+дополнительные улучшения модели, такие как использование более
+совершенных методов обработки изображений или включение других типов
+данных, таких как данные датчиков транспортных средств
+    </div>
+    <h2>Devs</h2>
+    <div class="devs">
+        <div class="dev">
+            Куьчинский Герман
+        </div>
+        <div class="dev">
+            Козьма Андрей
+        </div>
+        <div class="dev">
+            Удалов Михаил
+        </div>
+        <div class="dev">
+            Ахмедова Ида
+        </div>
+        <div class="dev">
+            Каледа Настя
+        </div>
+        <div class="dev">
+            Чаплинская Олеся
+        </div>
+        <div class="dev">
+            Шведчиков Александр
+        </div>
+        <div class="dev">
+            Наумов Руслан
+        </div>
+        <div class="dev">
+            Зморка Ильяс
+        </div>
+        <div class="dev">
+            Белокопытов Тимофей
+        </div>
+        <div class="dev">
+            Буянов Данила
+        </div>
+    </div>
+</body>
+</html>

@@ -12,12 +12,21 @@
         body {
             padding: 20px;
         }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ref {
+            color: white;
+        }
     </style>
 </head>
 <body>
     <!-- Навигационная панель (Navbar) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand">Upload Image</a>
+        <a class="ref" href="{% url 'about' %}">About</a>
     </nav>
 
     <div class="container mt-4">

@@ -8,7 +8,7 @@ import numpy as np
 from .forms import ImageUploadForm
 
 # Loading the model
-model = load_model("app/ResNet152V2.h5")
+# model = load_model("app/ResNet152V2.h5")
 
 
 def prepare_image(img_path):
@@ -25,9 +25,9 @@ def index(request):
         if form.is_valid():
             img = form.cleaned_data['image']
             img_path = default_storage.save('app/static/' + img.name, img)
-            img_array = prepare_image(img_path)
-            prediction = model.predict(img_array)
-            result = prediction[0]
+            # img_array = prepare_image(img_path)
+            # prediction = model.predict(img_array)
+            # result = prediction[0]
 
             return render(request, 'result.html', {'result': result, 'img_path': img.name})
 
@@ -35,3 +35,7 @@ def index(request):
         form = ImageUploadForm()
 
     return render(request, 'index.html', {'form': form})
+
+
+def about(request):
+    return render(request, 'about.html')
