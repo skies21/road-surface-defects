@@ -22,3 +22,4 @@
     ```
 
 4. Убедитесь, что у вас есть файл модели `ResNet152V2.h5` в директории `app`.
+   https://drive.google.com/file/d/1xNDTQrk95Q60dqsfwT5kG7uVsUp3izxn/view
